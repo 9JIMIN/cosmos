@@ -5,8 +5,6 @@ const g_const = 0.01
 
 func _ready():
 	nodes = get_tree().get_nodes_in_group('Gravity')
-	for i in nodes:
-		print(i.global_transform.origin)
 	
 func _physics_process(delta):
 	for i in range(len(nodes)):

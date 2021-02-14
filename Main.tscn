@@ -23,4 +23,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448728, 6.08378, 6.0869 )
 velocity = Vector3( 10, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.872249, 0.489063, 0, -0.489063, 0.872249, 0, 9.71489, 50 )
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 30 )
