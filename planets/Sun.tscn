@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://planets/Sun.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+emission_enabled = true
+emission = Color( 0.843137, 0.286275, 0.0705882, 1 )
+emission_energy = 2.8
+emission_operator = 0
+emission_on_uv2 = false
+ao_enabled = true
+ao_light_affect = 0.32
+ao_on_uv2 = false
+ao_texture_channel = 0
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="SphereShape" id=3]
+
+[node name="Sun" type="KinematicBody" groups=[
+"Gravity",
+]]
+script = ExtResource( 1 )
+radius = 1.0
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
